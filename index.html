@@ -104,10 +104,13 @@ h3{font-size:18px;line-height:1.3;margin-bottom:8px;letter-spacing:-.3px}
 .guide-item .arrow{font-size:22px;color:var(--sage-dark)}
 .guide-detail{display:none;padding:18px 20px;background:#edf2e8;border-radius:0 0 17px 17px;margin-top:-14px;margin-bottom:10px;font-size:13px;color:#526854}
 .guide-detail.open{display:block}
+.grid.dl-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){.grid.dl-two{grid-template-columns:1fr}}
 .guide-detail a.read-link{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#f17fa8;color:#fff;font-weight:800;font-size:13px;text-decoration:none;word-break:normal;box-shadow:0 4px 12px rgba(241,127,168,.3)}
 .guide-detail a.read-link:hover{filter:brightness(1.06)}
 .guide-detail .link-hint{display:block;margin-top:8px;font-size:12px;color:#7d8a7f}
 .guide-detail{line-height:1.8}
+.guide-detail a.goto{color:#f17fa8;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .sponsor-box{text-align:center;background:linear-gradient(145deg,#f9e8e5,#f7f5e9 55%,#e7efdf);border-radius:28px;padding:40px 24px}
 .sponsor-heart{font-size:50px;margin-bottom:10px}
 .sponsor-box .lead{margin:0 auto}
@@ -363,13 +366,26 @@ footer{border-top:1px solid var(--line);padding:25px 24px 34px;color:var(--muted
   <div class="guide-list">
     <button class="guide-item" aria-expanded="false"><span><strong>วิธีติดตั้งฟอนต์</strong><span>ติดตั้งฟอนต์เพิ่มเอง พร้อมข้อมูลรุ่นที่รองรับ</span></span><span class="arrow">＋</span></button>
     <div class="guide-detail"><a class="read-link" href="https://mimee-reader.blogspot.com/2026/07/blog-post.html" target="_blank" rel="noopener noreferrer">📖 อ่านวิธีติดตั้งฟอนต์แบบละเอียด ↗</a><span class="link-hint">👆 กดปุ่มนี้เพื่อเปิดอ่านในหน้าใหม่</span><br><br><strong>Note :</strong> รุ่น X4C X4Pro ตามข้อมูลจาก Crosspoint 1.6.5 สามารถใช้ไฟล์ฟอนต์ .ttf ได้เลย แต่การแปลงเป็น .cpfont จะใช้งานได้เสถียรสุด<br>Mimee Reader 2.5.9 Alpha ฐานเฟิร์มแวร์มาจาก Crosspoint 1.6.5</div>
-    <button class="guide-item" aria-expanded="false"><span><strong>วิธีดิกชันนารี</strong><span>ติดตั้งและใช้งานดิกชันนารี</span></span><span class="arrow">＋</span></button>
+    <button class="guide-item" aria-expanded="false"><span><strong>วิธีลงดิกชันนารี</strong><span>ติดตั้งและใช้งานดิกชันนารี</span></span><span class="arrow">＋</span></button>
     <div class="guide-detail"><a class="read-link" href="https://mimee-reader.blogspot.com/2026/08/blog-post.html" target="_blank" rel="noopener noreferrer">📖 อ่านวิธีติดตั้งดิกชันนารีแบบละเอียด ↗</a><span class="link-hint">👆 กดปุ่มนี้เพื่อเปิดอ่านในหน้าใหม่</span></div>
+    <button class="guide-item" aria-expanded="false"><span><strong>การเปิดระบบตัดคำไทย</strong><span>แสดงผลตัดคำไทยได้ถูกต้องสวยงาม</span></span><span class="arrow">＋</span></button>
+    <div class="guide-detail">แนะนำให้เปิดระบบตัดคำ เพื่อการแสดงผลตัดคำไทยที่ถูกต้องสวยงาม<br><br><strong>ตั้งค่า &gt; การอ่าน &gt; ตั้งค่าข้อความ &gt; รูปแบบ &gt; การตัดคำ &gt; เปิด</strong></div>
+    <button class="guide-item" aria-expanded="false"><span><strong>วิธีใส่รูปสติ๊กเกอร์ตกแต่ง Mimee Custom Theme</strong><span>ใส่รูปสติ๊กเกอร์ตกแต่งหน้าจอเอง</span></span><span class="arrow">＋</span></button>
+    <div class="guide-detail"><strong>1.</strong> นำรูปที่ต้องการขนาด ส่วนบนใช้ 440x110px ส่วนกลางใช้ 440x190px ใส่ไว้ใน SD Card รองรับไฟล์ .jpg .png (โหลดไฟล์ Template ตัวอย่างได้ที่<a class="goto" href="#" data-goto="download">หน้าดาวน์โหลด</a>) นำทั้งโฟลเดอร์วางไว้ในหน้าแรกของ SD Card<br><br><strong>2.</strong> เปลี่ยนเป็นธีม Mimee Custom ก่อน เข้าเมนูตั้งค่าในเครื่อง<br>ตั้งค่า &gt; หน้าจอ &gt; UI Theme &gt; Mimee Custom<br><br><strong>3.</strong> เลือกรูปภาพใส่ ตั้งค่า &gt; หน้าจอ &gt; Mimee Custom 1 (เลือกรูปภาพส่วนบน) / Mimee Custom 2 (เลือกรูปภาพส่วนกลาง)<br><br>เตรียมพบเครื่องมือทำรูปส่วนกลาง To-do list ปฏิทิน เร็วๆนี้</div>
+    <button class="guide-item" aria-expanded="false"><span><strong>ฟอนต์ระบบ</strong><span>เลือกฟอนต์ระบบ Google Sans และ Mali</span></span><span class="arrow">＋</span></button>
+    <div class="guide-detail">มีให้เลือก 2 ฟอนต์ใน ตั้งค่า &gt; หน้าจอ &gt; ฟอนต์ระบบ ฟอนต์ Google Sans และ Mali</div>
+    <button class="guide-item" aria-expanded="false"><span><strong>วิธีเพิ่มเล่มโปรดเข้าหน้าเล่มโปรด 🩷📚</strong><span>เพิ่มและนำเล่มโปรดออก</span></span><span class="arrow">＋</span></button>
+    <div class="guide-detail">กดค้างที่ชื่อหนังสือใน เรียกดูไฟล์ (File browser) จะขึ้นป๊อบอัพ เลือก "เพิ่มเป็นเล่มโปรด" จำกัด 18 เล่ม<br><br><strong>วิธีนำเล่มโปรดออกจากหน้าเล่มโปรด</strong><br>กดค้างที่หนังสือ "นำออกจากเล่มโปรด"</div>
+    <button class="guide-item" aria-expanded="false"><span><strong>วิธีดูสถิติการอ่าน</strong><span>ดูสถิติรายวัน สัปดาห์ เดือน</span></span><span class="arrow">＋</span></button>
+    <div class="guide-detail">เข้าดูหน้าสถิติการอ่านได้โดยการเข้าที่ไอคอนหัวใจเล่มโปรด เลื่อนลงด้านล่าง "สถิติการอ่าน"<br><br>สามารถเลือกดูวัน สัปดาห์ เดือน เชิงลึกและตั้งเป้าหมายจำนวนวัน เลือกดูแต่ละวันได้โดยการกดเลื่อนซ้ายขวาขึ้นลง</div>
+    <button class="guide-item" aria-expanded="false"><span><strong>การซิงก์เวลาสำหรับ X4 รุ่นแรกสำหรับเก็บข้อมูลสถิติการอ่าน</strong><span>ตั้งเวลาเครื่องเพื่อเก็บสถิติ</span></span><span class="arrow">＋</span></button>
+    <div class="guide-detail">เนื่องจาก X4 รุ่นแรกไม่มี RTC จึงจำเป็นต้องตั้งเวลาก่อนทุกครั้งที่เปิดเครื่องถ้าหากจะเก็บข้อมูลสถิติ สามารถปรับตั้งเวลาได้เองจากเมนูตั้งนาฬิกาในหน้าสถิติการอ่าน และใน ตั้งค่า &gt; ระบบ &gt; นาฬิกา<br><br>การกดซิงก์เวลาตอนนี้จะเป็นการดึงข้อมูลเวลาจากอินเตอร์เน็ตผ่าน Wi-Fi NTP ใช้เวลาไม่กี่วินาทีเท่านั้น</div>
   </div>
 </section>
 
 <section class="page" id="page-download">
-  <div class="page-intro"><span class="eyebrow">DOWNLOADS</span><h1>Choose your <em style="color:var(--sage-dark)">little reader.</em></h1><p class="lead">เลือกอุปกรณ์ของคุณเพื่อดูรายการไฟล์ที่ตรงรุ่น ลิงก์ดาวน์โหลดจะเปิดใช้งานเมื่อใส่ URL จริงไว้ใน CONFIG ด้านล่างของไฟล์</p></div>
+  <div class="page-intro"><span class="eyebrow">DOWNLOADS</span><h1>Get your <em style="color:var(--sage-dark)">Mimee Reader.</em></h1><p class="lead">เลือกอุปกรณ์ของคุณเพื่อดูรายการไฟล์ดาวน์โหลดที่ตรงรุ่น</p></div>
+  <div class="callout pink" style="margin-top:0;margin-bottom:22px"><strong>⚠️ คำเตือน:</strong> การติดตั้ง CFW ใดๆ รวมถึง FW Mimee Reader กับเครื่องล็อคจีน เครื่องที่ใช้สาย USB ต่อคอมพิวเตอร์ไม่ได้ (เครื่องที่ไม่ได้ซื้อจากเว็บไซต์ Xteink ทางการ) มีความเสี่ยงอาจเกิดการผิดพลาดหรือเครื่องอาจบริคได้ โปรดพิจารณาการยอมรับความเสี่ยงนี้ก่อนติดตั้งนะคะ</div>
   <h2 style="font-size:22px">เลือกอุปกรณ์</h2>
   <div class="device-picker" role="group" aria-label="เลือกอุปกรณ์">
     <button class="device-chip" data-device="X4" aria-pressed="true">XTEINK X4</button>
@@ -378,23 +394,24 @@ footer{border-top:1px solid var(--line);padding:25px 24px 34px;color:var(--muted
     <button class="device-chip" data-device="X4Pro" aria-pressed="false">XTEINK X4Pro</button>
   </div>
   <div class="firmware-grid" id="firmware-grid">
-    <article class="firmware-card" data-firmware-device="X4"><h3>XTEINK X4 <span class="device-model">X4</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X4</p><p class="download-state" data-download-state="X4">ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลด</p><a class="btn btn-primary" data-download-link="X4" href="#" aria-disabled="true">ดาวน์โหลด X4 ↗</a></article>
-    <article class="firmware-card" data-firmware-device="X3"><h3>XTEINK X3 <span class="device-model">X3</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X3</p><p class="download-state" data-download-state="X3">ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลด</p><a class="btn btn-primary" data-download-link="X3" href="#" aria-disabled="true">ดาวน์โหลด X3 ↗</a></article>
-    <article class="firmware-card" data-firmware-device="X4C"><h3>XTEINK X4C <span class="device-model">X4C</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X4C</p><p class="download-state" data-download-state="X4C">ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลด</p><a class="btn btn-primary" data-download-link="X4C" href="#" aria-disabled="true">ดาวน์โหลด X4C ↗</a></article>
-    <article class="firmware-card" data-firmware-device="X4Pro"><h3>XTEINK X4Pro <span class="device-model">X4Pro</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X4Pro</p><p class="download-state" data-download-state="X4Pro">ยังไม่ได้ตั้งค่าลิงก์ดาวน์โหลด</p><a class="btn btn-primary" data-download-link="X4Pro" href="#" aria-disabled="true">ดาวน์โหลด X4Pro ↗</a></article>
+    <article class="firmware-card" data-firmware-device="X4"><h3>XTEINK X4 <span class="device-model">X4</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X4</p><p class="download-state" data-download-state="X4">Mimee Reader 2.5.9 Alpha</p><a class="btn btn-primary" data-download-link="X4" href="https://www.mediafire.com/file/wwb819wqv05kxa0/Mimee_Reader_2.5.9_Alpha_X4_X3.zip/file" target="_blank" rel="noopener noreferrer">ดาวน์โหลด X4 ↗</a></article>
+    <article class="firmware-card" data-firmware-device="X3"><h3>XTEINK X3 <span class="device-model">X3</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X3</p><p class="download-state" data-download-state="X3">Mimee Reader 2.5.9 Alpha</p><a class="btn btn-primary" data-download-link="X3" href="https://www.mediafire.com/file/wwb819wqv05kxa0/Mimee_Reader_2.5.9_Alpha_X4_X3.zip/file" target="_blank" rel="noopener noreferrer">ดาวน์โหลด X3 ↗</a></article>
+    <article class="firmware-card" data-firmware-device="X4C"><h3>XTEINK X4C <span class="device-model">X4C</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X4C</p><p class="download-state" data-download-state="X4C">Mimee Reader 2.5.9 Alpha</p><a class="btn btn-primary" data-download-link="X4C" href="https://www.mediafire.com/file/xoc3is5x1rve5k9/Mimee_Reader_2.5.9_Alpha_X4C.zip/file" target="_blank" rel="noopener noreferrer">ดาวน์โหลด X4C ↗</a></article>
+    <article class="firmware-card" data-firmware-device="X4Pro"><h3>XTEINK X4Pro <span class="device-model">X4Pro</span></h3><p>ไฟล์เฟิร์มแวร์สำหรับรุ่น X4Pro</p><div class="callout pink" style="margin:12px 0 0"><strong>⚠️ คำเตือน:</strong> รุ่น X4Pro สำหรับเครื่องไม่ติดล็อคที่ซื้อจาก Xteink Official Website เท่านั้น</div><p class="download-state" data-download-state="X4Pro">Mimee Reader 2.5.9 Alpha</p><a class="btn btn-primary" data-download-link="X4Pro" href="https://www.mediafire.com/file/o10iy9l45qcxxkh/Mimee_Reader_2.5.9_Alpha_X4Pro.zip/file" target="_blank" rel="noopener noreferrer">ดาวน์โหลด X4Pro ↗</a></article>
   </div>
-  <div class="grid" style="margin-top:22px">
-    <article class="card"><div class="card-icon">🏷️</div><h3>Latest version</h3><p>หมายเลขเวอร์ชันและวันที่จะต้องตรงกับ Release จริง</p></article>
-    <article class="card pink"><div class="card-icon pink">🧩</div><h3>Which file?</h3><p>เลือกไฟล์ที่ระบุว่ารองรับอุปกรณ์ของคุณเท่านั้น</p></article>
+  <h2 style="font-size:22px;margin-top:34px">ส่วนเสริมดาวน์โหลด</h2>
+  <div class="firmware-grid" style="grid-template-columns:1fr">
+    <article class="firmware-card"><h3>Sticker Mimee Custom Theme Pack</h3><p>แพคสติกเกอร์รูปภาพสำหรับ Mimee Custom Theme และไฟล์ Template สำหรับแก้ไขเอง</p><a class="btn btn-primary" style="margin-top:14px" href="https://www.mediafire.com/file/2u57yeic0midt42/Mimee_Reader_Custom_Theme_Pack.zip/file" target="_blank" rel="noopener noreferrer">ดาวน์โหลด Theme Pack ↗</a></article>
+  </div>
+  <div class="grid dl-two" style="margin-top:22px">
+    <article class="card"><div class="card-icon">🏷️</div><h3>Latest version</h3><p>Mimee Reader 2.5.9 Alpha</p></article>
     <article class="card"><div class="card-icon cream">🛡️</div><h3>Before you install</h3><p>อ่านวิธีติดตั้งและสำรองข้อมูลก่อนแฟลชเฟิร์มแวร์</p><div class="btn-row"><button class="btn btn-soft" data-goto="install">เปิดวิธีติดตั้ง ↗</button></div></article>
   </div>
-  <p class="notice">หมายเหตุ: ยังไม่มี URL ดาวน์โหลดในไฟล์นี้ จึงปิดปุ่มดาวน์โหลดไว้ก่อนเพื่อป้องกันการกดไปยังลิงก์ที่ไม่ถูกต้อง</p>
   <section id="version-history" style="margin-top:60px">
   <div class="section-head"><div><span class="eyebrow">VERSION HISTORY</span><h2 style="margin-top:13px">ประวัติเวอร์ชัน</h2></div><p>บันทึกการเปลี่ยนแปลงของ Mimee Reader ว่าแต่ละเวอร์ชันเพิ่ม แก้ไข หรือเปลี่ยนอะไรบ้าง</p></div>
-  <div class="callout pink"><strong>ยังไม่มีข้อมูล Release ที่ยืนยันแล้ว</strong><br>รายการด้านล่างเป็นช่องเตรียมข้อมูล ไม่ใช่ประวัติเวอร์ชันจริง กรุณาเพิ่มข้อมูลจาก Release หรือ Repository ก่อนเผยแพร่</div>
   <div class="timeline">
-    <article class="timeline-item"><div class="timeline-version">Latest release<span class="timeline-date">วันที่: รอข้อมูลจริง</span></div><div><h3>เวอร์ชันล่าสุด</h3><p class="muted">เพิ่มหมายเลขเวอร์ชัน รายการเปลี่ยนแปลง ลิงก์ดาวน์โหลด และรุ่นอุปกรณ์ที่รองรับเมื่อมีข้อมูลยืนยัน</p></div></article>
-    <article class="timeline-item"><div class="timeline-version">Previous release<span class="timeline-date">วันที่: รอข้อมูลจริง</span></div><div><h3>เวอร์ชันก่อนหน้า</h3><p class="muted">เพิ่มรายละเอียดการแก้บั๊ก ฟีเจอร์ใหม่ และข้อควรระวังจาก Release จริง</p></div></article>
+    <article class="timeline-item"><div class="timeline-version">Latest release<span class="timeline-date">วันที่: 19 Oct 2026</span></div><div><h3>Mimee Reader 2.5.9 Alpha</h3><p class="muted">เพิ่ม Mimee Custom Theme<br>ระบบเล่มโปรด ระบบปรับขนาด UI และฟอนต์ระบบ</p></div></article>
+    <article class="timeline-item"><div class="timeline-version">Previous release<span class="timeline-date">วันที่: 3 Oct 2026</span></div><div><h3>Mimee Reader 2.5.9</h3><p class="muted">อัพเดทฐานเฟิร์มแวร์จาก Crosspoint 1.6.5 Stable<br>เพิ่ม Mimee Neko Theme และ Mimee Bookshelf Theme</p></div></article>
   </div>
   </section>
 </section>
@@ -403,7 +420,7 @@ footer{border-top:1px solid var(--line);padding:25px 24px 34px;color:var(--muted
 
 <section class="page" id="page-support">
   <div class="page-intro"><span class="eyebrow">WITH GRATITUDE</span><h1>Help this little<br><em style="color:#f17fa8">project grow.</em></h1><p class="lead">ทุกการสนับสนุน ไม่ว่าจะน้อยหรือมาก มีความหมายกับเรามากเสมอค่ะ 🩷</p></div>
-  <div class="sponsor-box"><div class="sponsor-heart">🌷🍀</div><h2>Every kindness means the world.</h2><p class="lead">ถ้าคุณชอบ Mimee Reader สามารถสนับสนุนโปรเจกต์ผ่านช่องทางด้านล่างได้ ไม่จำกัดจำนวนขั้นต่ำ เพื่อเป็นกำลังใจ และช่วยค่าใช้จ่ายต่างๆของหมี</p><div class="donation-options"><a class="donation-option" href="https://easydonate.app/mimeebear" target="_blank" rel="noopener noreferrer">💗 สนับสนุน Mimee Reader ↗</a><button class="donation-option" data-donate="share">🌱 แชร์โปรเจกต์</button></div><p class="lead" style="margin-top:18px">ขอบคุณทุกกำลังใจที่ช่วยให้ Mimee Reader เติบโตต่อไปนะคะ 🩷 ชื่อของผู้สนับสนุนทุกท่านจะได้รับการขึ้นไว้ที่หน้า <a href="#" data-goto="supporters" style="color:#f17fa8;font-weight:800;text-decoration:underline">ผู้สนับสนุน</a> เพื่อเป็นการขอบคุณจากใจค่ะ</p><p class="notice" id="support-message">ขอบคุณสำหรับการสนับสนุนและการบอกต่อค่ะ</p></div>
+  <div class="sponsor-box"><div class="sponsor-heart">🌷🍀</div><h2>Every kindness means the world.</h2><p class="lead">ถ้าคุณชอบ Mimee Reader สามารถสนับสนุนโปรเจกต์ผ่านช่องทางด้านล่างได้ เพื่อเป็นกำลังใจ และช่วยค่าใช้จ่ายต่างๆของหมี</p><div class="donation-options"><a class="donation-option" href="https://easydonate.app/mimeebear" target="_blank" rel="noopener noreferrer">💗 สนับสนุน Mimee Reader ↗</a><button class="donation-option" data-donate="share">🌱 แชร์โปรเจกต์</button></div><p class="lead" style="margin-top:18px">ขอบคุณทุกกำลังใจที่ช่วยให้ Mimee Reader เติบโตต่อไปนะคะ 🩷 ชื่อของผู้สนับสนุนทุกท่านจะได้รับการขึ้นไว้ที่หน้า <a href="#" data-goto="supporters" style="color:#f17fa8;font-weight:800;text-decoration:underline">ผู้สนับสนุน</a> เพื่อเป็นการขอบคุณจากใจค่ะ</p><p class="notice" id="support-message">ขอบคุณสำหรับการสนับสนุนและการบอกต่อค่ะ</p></div>
   <div class="grid" style="margin-top:18px">
     <article class="card"><div class="card-icon">💌</div><h3>Share the love</h3><p>บอกต่อ Mimee Reader ให้เพื่อน ๆ ที่ชอบอ่านหนังสือบนเครื่อง E Ink</p></article>
     <article class="card"><div class="card-icon pink">🪴</div><h3>Help improve</h3><p>รายงานบั๊กหรือเสนอแนวทางพัฒนาผ่านช่องทางของโปรเจกต์</p></article>
@@ -428,9 +445,9 @@ footer{border-top:1px solid var(--line);padding:25px 24px 34px;color:var(--muted
 </main>
 <footer><div class="footer-inner"><div><div class="footer-brand">🐻🍀 Mimee Reader</div><div>Made with 🩷 Mimee Reader</div></div><div>A little cozy world for reading.</div></div></footer>
 <script>
-// Set verified release URLs here before publishing. Leave empty until confirmed.
+// Download URLs for each device.
 const CONFIG = {
-  downloads: { X4: '', X3: '', X4C: '', X4Pro: '' },
+  downloads: { X4: 'https://www.mediafire.com/file/wwb819wqv05kxa0/Mimee_Reader_2.5.9_Alpha_X4_X3.zip/file', X3: 'https://www.mediafire.com/file/wwb819wqv05kxa0/Mimee_Reader_2.5.9_Alpha_X4_X3.zip/file', X4C: 'https://www.mediafire.com/file/xoc3is5x1rve5k9/Mimee_Reader_2.5.9_Alpha_X4C.zip/file', X4Pro: 'https://www.mediafire.com/file/o10iy9l45qcxxkh/Mimee_Reader_2.5.9_Alpha_X4Pro.zip/file' },
   donationUrl: 'https://easydonate.app/mimeebear'
 };
 const navButtons = [...document.querySelectorAll('.nav-btn[data-page]')];
@@ -466,7 +483,7 @@ document.querySelectorAll('[data-donate="share"]').forEach(btn=>btn.addEventList
 Object.entries(CONFIG.downloads).forEach(([device,url])=>{
   const link=document.querySelector(`[data-download-link="${device}"]`);
   const state=document.querySelector(`[data-download-state="${device}"]`);
-  if(link && url){ link.href=url; link.removeAttribute('aria-disabled'); link.target='_blank'; link.rel='noopener noreferrer'; if(state) state.textContent='มีลิงก์ดาวน์โหลดตั้งค่าไว้'; }
+  if(link && url){ link.href=url; link.removeAttribute('aria-disabled'); link.target='_blank'; link.rel='noopener noreferrer'; }
 });
 function selectDevice(device){
   document.querySelectorAll('[data-device]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.device===device)));
